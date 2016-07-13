@@ -331,7 +331,7 @@ const DateRangePicker = React.createClass({
   completeRangeSelection() {
     let range = this.state.highlightedRange;
 
-    if (range && (!range.start.isSame(range.end, 'day') || this.props.singleDateRange)) {
+    if (range && this.props.singleDateRange) {
       this.setState({
         selectedStartDate: null,
         highlightedRange: null,
