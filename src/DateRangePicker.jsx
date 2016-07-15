@@ -300,6 +300,7 @@ const DateRangePicker = React.createClass({
     this.setState({
       hideSelection: true,
       selectedStartDate: date,
+      highlightedRange: moment.range(date, date)
     });
     if (typeof this.props.onSelectStart === 'function') {
       this.props.onSelectStart(moment(date));

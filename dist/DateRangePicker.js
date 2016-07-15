@@ -354,7 +354,8 @@ var DateRangePicker = _react2['default'].createClass({
   startRangeSelection: function startRangeSelection(date) {
     this.setState({
       hideSelection: true,
-      selectedStartDate: date
+      selectedStartDate: date,
+      highlightedRange: _moment2['default'].range(date, date)
     });
     if (typeof this.props.onSelectStart === 'function') {
       this.props.onSelectStart((0, _moment2['default'])(date));
